@@ -13,6 +13,8 @@ kind: Deployment
 metadata:
   name: {{.Values.name}}
   namespace: {{.Values.namespace}}
+  labels:
+    app: {{.Values.name}}
 spec:
   replicas: {{int .Values.replicas}}
   selector:
@@ -65,6 +67,8 @@ kind: Service
 metadata:
   name: app-service
   namespace: {{.Values.namespace}}
+  labels:
+    app: {{.Values.name}}
 spec:
   type: NodePort
   selector:
