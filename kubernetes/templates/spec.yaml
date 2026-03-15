@@ -20,10 +20,12 @@ spec:
   selector:
     matchLabels:
       app: {{.Values.name}}
+      harness.io/track: stable
   template:
     metadata:
       labels:
         app: {{.Values.name}}
+        harness.io/track: stable
     spec:
       containers:
         - name: {{.Values.name}}
