@@ -1,0 +1,13 @@
+name: <+serviceVariables.NAME>
+replicas: <+serviceVariables.REPLICAS>
+namespace: <+infra.namespace>
+
+image: <+artifact.image>
+
+resources:
+  limits:
+    cpu: <+serviceVariables.LIMITS_CPU>
+    memory: <+serviceVariables.MEMORY>
+  requests:
+    cpu: <+serviceVariables.REQUESTS_CPU>
+    memory: <+serviceVariables.MEMORY>
